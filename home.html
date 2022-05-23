@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BodyFat prediction</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        html{
+            overflow: auto;
+        }
+
+        body{
+            position: absolute;
+            width: 100%;
+            height: 180%;
+            margin: 0px;
+            padding: 0px;
+            background: #ebebeb;
+        }
+
+        #login-form-container{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #696969;
+        }
+    </style>
+</head>	
+<body>
+    <div id="login-form-container">
+        <form action="predict" method="GET">
+            <div class="card" style="width: 400px;background-color:#ebebeb">
+            <div class="card-content">
+                <div class="media">
+                <div class="is-size-4 has-text-centered"><b>Предсказание процента жира в организме</b></div>
+                </div>
+                <div class="content">
+
+                <div class="field">
+                    <p class="control">
+                    Возраст, лет: <input class="input" type="number" value='0' step='1' min='0' max='99' name="age" id="age">
+                    </p>
+                </div>
+
+                <div class="field">
+                    <p class="control">
+                    Вес, кг: <input class="input" type="number" value='0' step='1' min='0' max='200' name="weight" id="weight">
+                    </p>
+                </div>
+
+                <div class="field">
+                    <p class="control">
+                    Рост, см: <input class="input" type="number" value='0' step='1' min='0' max='200' name="height" id="height">
+                    </p>
+                </div>
+
+                <div class="field">
+                    <p class="control">
+                    Окружность шеи, см: <input class="input" type="number" value='0' step='1' min='0' max='200' name="neck" id="neck">
+                    </p>
+                </div>
+                
+                <div class="field">
+                    <p class="control">
+                    Окружность груди, см: <input class="input" type="number" value='0' step='1' min='0' max='200' name="chest" id="chest">
+                    </p>
+                </div>
+                
+                <div class="field">
+                    <p class="control">
+                    Окружность живота, см: <input class="input" type="number" value='0' step='1' min='0' max='200' name="abd" id="abd">
+                    </p>
+                </div>
+                
+                <div class="field">
+                    <p class="control">
+                    Окружность пояса, см: <input class="input" type="number" value='0' step='1' min='0' max='200' name="hip" id="hip">
+                    </p>
+                </div>
+                
+                <div class="field">
+                    <p class="control">
+                    Окружность бедра, см: <input class="input" type="number" value='0' step='1' min='0' max='200' name="thigh" id="thigh">
+                    </p>
+                </div>
+                
+                <div class="field">
+                    <p class="control">
+                    Окружность колена, см: <input class="input" type="number" value='0' step='1' min='0' max='200' name="knee" id="knee">
+                    </p>
+                </div>
+                
+                <div class="field">
+                    <p class="control">
+                    Окружность лодыжки, см: <input class="input" type="number" value='0' step='1' min='0' max='200' name="ankle" id="ankle">
+                    </p>
+                </div>
+                
+                <div class="field">
+                    <p class="control">
+                    Окружность бицепса, см: <input class="input" type="number" value='0' step='1' min='0' max='200' name="bic" id="bic">
+                    </p>
+                </div>
+                
+                <div class="field">
+                    <p class="control">
+                    Окружность предплечья, см: <input class="input" type="number" value='0' step='1' min='0' max='200' name="for" id="for">
+                    </p>
+                </div>
+                
+                <div class="field">
+                    <p class="control">
+                    Окружность запястья, см: <input class="input" type="number" value='0' step='1' min='0' max='200' name="wrist" id="wrist">
+                    </p>
+                </div>
+                
+                <div class="field">
+                    <button class="button is-fullwidth is-rounded is-success">Предсказать</button>
+                </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
